@@ -35,13 +35,19 @@ class HomePage extends StatelessWidget {
     return FutureBuilder<Response>(
       // In real apps, use some sort of state management (BLoC is cool)
       // to prevent duplicate requests when the UI rebuilds
-      future: Provider.of<PostApiService>(context).getPosts(),
+      future:
+          Provider.of<PostApiService>(context).getPost("65e26711efecce8c23bb"),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.done) {
           // Snapshot's data is the Response
           // You can see there's no type safety here (only List<dynamic>)
-          final List posts = json.decode(snapshot.data.bodyString);
-          return _buildPosts(context, posts);
+          // final List posts = json.decode(snapshot.data.bodyString);
+
+          // return Text(posts[2].toString());
+
+          return Text("test: ${snapshot.data.bodyString}");
+
+          // return _buildPosts(context, posts);
         } else {
           // Show a loading indicator while waiting for the posts
           return Center(

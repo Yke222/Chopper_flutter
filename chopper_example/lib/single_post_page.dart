@@ -21,7 +21,8 @@ class SinglePostPage extends StatelessWidget {
         title: Text('Chopper Blog'),
       ),
       body: FutureBuilder<Response>(
-        future: Provider.of<PostApiService>(context).getPost(postId),
+        future: Provider.of<PostApiService>(context)
+            .getPost("65e26711efecce8c23bb"),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.done) {
             final Map post = json.decode(snapshot.data.bodyString);

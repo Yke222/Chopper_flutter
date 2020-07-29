@@ -18,21 +18,21 @@ class _$PostApiService extends PostApiService {
 
   @override
   Future<Response<dynamic>> getPosts() {
-    final $url = '/posts';
+    final $url = '';
     final $request = Request('GET', $url, client.baseUrl);
     return client.send<dynamic, dynamic>($request);
   }
 
   @override
-  Future<Response<dynamic>> getPost(int id) {
-    final $url = '/posts/$id';
+  Future<Response<dynamic>> getPost(String id) {
+    final $url = '/$id';
     final $request = Request('GET', $url, client.baseUrl);
     return client.send<dynamic, dynamic>($request);
   }
 
   @override
   Future<Response<dynamic>> postPost(Map<String, dynamic> body) {
-    final $url = '/posts';
+    final $url = '';
     final $body = body;
     final $request = Request('POST', $url, client.baseUrl, body: $body);
     return client.send<dynamic, dynamic>($request);
