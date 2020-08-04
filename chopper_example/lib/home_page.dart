@@ -7,7 +7,14 @@ import 'package:provider/provider.dart';
 import 'data/post_api_service.dart';
 import 'single_post_page.dart';
 
-class HomePage extends StatelessWidget {
+class Hmpg extends StatefulWidget {
+  const Hmpg() : super();
+
+  @override
+  HomePage createState() => HomePage();
+}
+
+class HomePage extends State<Hmpg> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

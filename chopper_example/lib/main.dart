@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       dispose: (context, PostApiService service) => service.client.dispose(),
       child: MaterialApp(
         title: 'Material App',
-        home: HomePage(),
+        home: Hmpg(),
       ),
     );
   }
